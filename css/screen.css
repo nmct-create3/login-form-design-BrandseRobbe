@@ -16,12 +16,28 @@
 \*------------------------------------*/
 
 :root {
+  --global-color-alpha-light-red: #ff33334d;
+  --global-color-alpha-light-red: #ff3333;
   --tekstkleur: #20223a;
   --achtergrond: #f5f6fa;
   --grey-hover: #caccd4;
   --blauw: #3385ff;
   --blauw-opacity: #3385ff4d;
   --logo__donker: #1b4186;
+  --global-color-alpha-dark-blue: #1b4186;
+
+  --global-color-neutral-xxxxx-light: #f5f6fa;
+  --global-color-neutral-xxxx-light: #e2e3e7;
+  --global-color-neutral-xxx-light: #caccd4;
+  --global-color-neutral-xx-light: #b5b6c0;
+  --global-color-neutral-light: #a0a1ad;
+  --global-color-neutral: #8b8c9a;
+  --global-color-neutral-dark: #757787;
+  --global-color-neutral-x-dark: #606274;
+  --global-color-neutral-xx-dark: #4b4c60;
+  --global-color-neutral-xxx-dark: #35374d;
+  --global-color-neutral-xxxx-dark: #2a2c43;
+  --global-color-neutral-xxxxx-dark: #20223a;
 }
 
 /* CSS variables here */
@@ -182,7 +198,7 @@ a:active {
 
 a:hover,
 a:focus {
-  color: var(--logo__donker);
+  color: var(--global-color-alpha-dark-blue);
 }
 label,
 input {
@@ -205,6 +221,9 @@ input {
 
 .o-row--login {
   /* stuff here to align the card */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 /* size modifiers */
@@ -459,13 +478,13 @@ input {
   display: block;
 }
 .c-logo__tekst {
-  color: var(--tekstkleur);
+  fill: var(--tekstkleur);
 }
-.c-logo__select {
-  color: var(--blauw);
+.c-logo__inner {
+  fill: var(--blauw);
 }
-.c-logo__donker {
-  color: var(--logo__donker);
+.c-logo__outer {
+  fill: var(--global-color-alpha-dark-blue);
 }
 
 /*
@@ -473,14 +492,42 @@ input {
     ---
     Card with box shadow
 */
+.c-card__body,
+.c-card__footer {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.07);
+}
+
+.c-card__header,
+.c-card__body,
+.c-card__footer {
+  padding: 24px;
+}
+.c-card__footer {
+}
+.c-card__header > *:last-child,
+.c-card__body > *:last-child,
+.c-card__footer > *:last-child,
+.c-card__body > *:last-child > *:last-child,
+.c-card__footer > *:last-child > *:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 27em) {
+  .c-card__body {
+    padding: 48px;
+  }
+  .c-card__title {
+    margin-bottom: 48px;
+  }
+}
 
 /*
     Component: Forms
     ---
     Everything form related here
 */
-.c-card__body {
-}
+
 .c-form-field {
   display: block;
 }
@@ -523,6 +570,13 @@ input {
 */
 
 .c-label {
+  font-size: 14px;
+  line-height: 16px;
+  padding-bottom: 8px;
+  color: var(--global-color-alpha-dark-bl);
+}
+.c-label__check {
+  padding: 0px 8px;
 }
 
 /* If a input is focused within the form-field class change te color of the label */
@@ -550,6 +604,7 @@ input {
 
 .c-button:hover {
   background-color: #4f95ff;
+  transition: all 0.1s ease-in-out;
 }
 
 .c-button:focus {
