@@ -19,11 +19,9 @@
   --global-color-alpha-light-red: #ff33334d;
   --global-color-alpha-light-red: #ff3333;
   --tekstkleur: #20223a;
-  --achtergrond: #f5f6fa;
-  --grey-hover: #caccd4;
-  --blauw: #3385ff;
-  --blauw-opacity: #3385ff4d;
-  --logo__donker: #1b4186;
+  --global-color-alpha-x-blue: #3385ff;
+  --global-color-alpha-x-blue-opacity: #3385ff4d;
+  --global-color-alpha-blue: #2e77e6;
   --global-color-alpha-dark-blue: #1b4186;
 
   --global-color-neutral-xxxxx-light: #f5f6fa;
@@ -57,7 +55,7 @@ html {
   line-height: 1.5;
   font-family: 'Inter Web', Helvetica, arial, sans-serif;
   color: var(--tekstkleur);
-  background-color: var(--achtergrond);
+  background-color: var(--global-color-neutral-xxxxx-light);
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -77,13 +75,13 @@ html {
 */
 
 ::-moz-selection {
-  background: var(--blauw);
+  background: var(--global-color-alpha-x-blue);
   color: white;
   text-shadow: none;
 }
 
 ::selection {
-  background: var(--blauw);
+  background: var(--global-color-alpha-x-blue);
   color: white;
   text-shadow: none;
 }
@@ -187,13 +185,13 @@ hr {
 }
 
 a {
-  color: var(--blauw);
+  color: var(--global-color-alpha-x-blue);
   transition: all 0.1s ease-in-out;
 }
 
 a:visited,
 a:active {
-  color: var(--blauw);
+  color: var(--global-color-alpha-x-blue);
 }
 
 a:hover,
@@ -481,7 +479,7 @@ input {
   fill: var(--tekstkleur);
 }
 .c-logo__inner {
-  fill: var(--blauw);
+  fill: var(--global-color-alpha-x-blue);
 }
 .c-logo__outer {
   fill: var(--global-color-alpha-dark-blue);
@@ -556,11 +554,11 @@ input {
   transition: all 0.1s ease-in-out;
 }
 .c-input:hover {
-  border-color: var(--grey-hover);
+  border-color: var(--global-color-neutral-xxx-light);
 }
 .c-input:focus {
-  border-color: var(--blauw);
-  box-shadow: 0 0 0 0 3px var(--blauw-opacity);
+  border-color: var(--global-color-alpha-x-blue);
+  box-shadow: 0 0 0 0 3px var(--global-color-alpha-x-blue-opacity);
 }
 
 /*
@@ -597,7 +595,7 @@ input {
   text-align: center;
   padding: 12px;
   width: 100%;
-  background-color: var(--blauw);
+  background-color: var(--global-color-alpha-x-blue);
   border-radius: 1px;
   color: white;
 }
@@ -610,7 +608,7 @@ input {
 .c-button:focus {
   color: white;
   border-color: #2e77e6;
-  background-color: var(--blauw);
+  background-color: var(--global-color-alpha-x-blue);
   box-shadow: 0 0 0 0 3px #3385ff7d;
 }
 
